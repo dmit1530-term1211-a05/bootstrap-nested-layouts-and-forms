@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Nested Layouts & Forms</title>
+    <!-- link in the Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+   <!-- nest containers -->
+   <header class="bg-light py-3 border-top border-success border-3 shadow">
+       <div class="container">
+           <h1 class="text-success">Festive Vibes</h1>
+       </div>
+   </header>
+   <!-- 
+       Overall you will have a 2 column layout.
+       column one will have and image and some text
+       - column one will take up 50% of the space on large screens
+       - and on small to med size screen it will take up 100% of the space.
+       column two will have a nest layout of two columns
+   -->
+   <section class="py-5">
+       <div class="container">
+        <!-- flex parent for the main two column layout -->
+        <div class="row">
+            <!-- column one -->
+            <div class="col-md-12 col-lg-6 mb-4">
+                <img class="rounded img-fluid mb-3" src="img/winter.webp" alt="winter wonderland" />
+                <h2 class="h2 text-danger">Winter Wonderland Festival</h2>
+            </div>
+            <!-- column 2 - will still act as a column but also as flex-parent element (ie.row) to the nested columns within this row.-->
+            <!-- first we look at your two column layout and decide how it layouts according the the spacing that you have left -->
+            <div class="row col-md-12 col-lg-6">
+                <div class="col-md-6">
+                    <img class="rounded img-fluid mb-3" src="img/presents.webp" alt="presents">
+                    <h3 class="text-uppercase">Gift Wrap</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia exercitationem vitae, tempora eveniet voluptas numquam cumque? Explicabo, quis vel obcaecati architecto non ducimus? Eius illo dolore animi cupiditate, unde possimus.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="rounded img-fluid mb-3" src="img/red-christmas-ornaments.webp" alt="decorations">
+                    <h3 class="text-uppercase">Christmas Tree Decorations</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia exercitationem vitae, tempora eveniet voluptas numquam cumque? Explicabo, quis vel obcaecati architecto non ducimus? Eius illo dolore animi cupiditate, unde possimus.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="rounded img-fluid mb-3" src="img/presents.webp" alt="presents">
+                    <h3 class="text-uppercase">Gift Wrap</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia exercitationem vitae, tempora eveniet voluptas numquam cumque? Explicabo, quis vel obcaecati architecto non ducimus? Eius illo dolore animi cupiditate, unde possimus.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="rounded img-fluid mb-3" src="img/red-christmas-ornaments.webp" alt="decorations">
+                    <h3 class="text-uppercase">Christmas Tree Decorations</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia exercitationem vitae, tempora eveniet voluptas numquam cumque? Explicabo, quis vel obcaecati architecto non ducimus? Eius illo dolore animi cupiditate, unde possimus.</p>
+                </div>
+            </div>
+        </div>
+       </div>
+   </section>
+
+   <section class="">
+       <div class="container-fluid bg-gradient bg-danger">
+           <div class="container py-5">
+                <div class="row">
+                   <div class="col-md-6 col-lg-4 mb-4">
+                       <img class="img-fluid rounded " src="img/hot-chocolate.webp" alt="hot chocolate">
+                       <h2 class="display-6">Let's grab a hot chocolate and chat!</h2>
+                   </div>
+                   <div class="col-md-6 col-lg-8">
+                       <!-- add in form -->
+                       <!-- form has: name (first and last), email, message and submit -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="fname" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="fname" placeholder="First Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="flname" placeholder="Last name"">
+                            </div>
+                        </form>
+                   </div>
+                </div>
+           </div>
+       </div>
+   </section>
+
+
+    <!-- scripts file go just above the closing body tag -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
